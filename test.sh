@@ -13,7 +13,7 @@ sudo wget "http://www.softether-download.com/files/softether/v4.27-9668-beta-201
 sleep 2
 sudo tar -xzf softether-vpnserver-v4.27-9668-beta-2018.05.29-linux-x64-64bit.tar.gz
 sleep 2
-sudo cd vpnserver
+cd vpnserver
 echo -e "${RED}Please press 1 for all the following questions.${NC}"
 sleep 2
 make
