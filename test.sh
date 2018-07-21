@@ -13,7 +13,7 @@ sudo wget  -O softether-vpn-4.27.tar.gz http://softether-download.com/files/soft
 sudo tar -xzf softether-vpn-4.27.tar.gz
 sudo cd vpnserver
 echo -e "${RED}Please press 1 for all the following questions.${NC}"
-sleep 1
+sleep 2
 make
 cd ..
 sudo mv vpnserver /usr/local/
@@ -55,8 +55,10 @@ esac
 exit 0' > /etc/init.d/vpnserver
 echo "System daemon created. Registering changes..."
 sleep 2
-chmod 755 /etc/init.d/vpnserver
-update-rc.d vpnserver defaults
+sudo chmod 755 /etc/init.d/vpnserver
+sudo /etc/init.d/vpnserver start
+sudo update-rc.d vpnserver defaults
+sleep 1
 echo -e "${RED}SoftEther VPN Server should now start as a system service from now on. To check status type 'systemctl status vpnserver'${NC}"
 systemctl start vpnserver
 esac
