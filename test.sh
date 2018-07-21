@@ -9,7 +9,7 @@ echo "Updating the system first..."
 sudo apt update && apt upgrade -y && apt install checkinstall build-essential -y
 echo "Downloading last stable release: 4.27"
 sleep 2
-sudo wget  -O softether-vpn-4.27.tar.gz http://softether-download.com/files/softether/v4.27-9668-beta-2018.05.29-treeServe/Linux/SoftEther_VPN_r/64bit_-_Intel_x64_or_AMD64/softether-vpnserver-v4.27-9668-beta-2018.05.29-linux-x64-64bit.tar.gz
+sudo wget  -O softether-vpn-4.27.tar.gz http://www.softether-download.com/files/softether/v4.27-9668-beta-2018.05.29-tree/Linux/SoftEther_VPN_Server/64bit_-_Intel_x64_or_AMD64/softether-vpnserver-v4.27-9668-beta-2018.05.29-linux-x64-64bit.tar.gz
 sudo tar -xzf softether-vpn-4.27.tar.gz
 sudo cd vpnserver
 echo -e "${RED}Please press 1 for all the following questions.${NC}"
